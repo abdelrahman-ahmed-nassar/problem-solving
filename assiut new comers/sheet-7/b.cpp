@@ -27,7 +27,7 @@ void solve()
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);

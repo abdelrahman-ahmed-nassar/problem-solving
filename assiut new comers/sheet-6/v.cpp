@@ -15,15 +15,21 @@ void solve()
 
   double slope1, slope2;
 
-  if(x2-x1 == 0 ) {
+  if (x2 - x1 == 0)
+  {
     slope1 = INT_MAX;
-  }else {
+  }
+  else
+  {
     slope1 = (y2 - y1) / (x2 - x1);
   }
 
-  if(x4-x3 == 0 ) {
+  if (x4 - x3 == 0)
+  {
     slope2 = INT_MAX;
-  }else {
+  }
+  else
+  {
     slope2 = (y4 - y3) / (x4 - x3);
   }
 
@@ -40,7 +46,7 @@ void solve()
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);

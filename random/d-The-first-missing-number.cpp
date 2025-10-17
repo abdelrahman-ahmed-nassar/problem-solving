@@ -14,18 +14,18 @@ void solve()
   long long index = -1; // 5 billion
   freq[index]++;
 
-
   for (int i = 0; i < n; i++)
   {
     int k;
-    cin>>k;
+    cin >> k;
     freq[k]++;
   }
 
   for (int i = -m; i <= m; i++)
   {
-    if (freq[i] == 0) {
-      cout<<i;
+    if (freq[i] == 0)
+    {
+      cout << i;
       return;
     }
   }
@@ -34,7 +34,7 @@ void solve()
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);

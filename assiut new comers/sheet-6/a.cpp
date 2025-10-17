@@ -1,43 +1,44 @@
-  // 
-  #include <iostream>
-  #include <bits/stdc++.h>
-  using namespace std;
+//
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
-  void solve()
+void solve()
+{
+  double n;
+  cin >> n;
+
+  if (n == 2 || n == 1)
   {
-    double n;
-    cin >> n;
+    cout << "YES";
+    return;
+  }
 
-    if (n == 2 || n == 1) {
+  while (n > 2)
+  {
+    n /= 2;
+    if (n == 2)
+    {
       cout << "YES";
       return;
     }
-
-    while (n > 2)
-    {
-      n /= 2;
-      if (n == 2)
-      {
-        cout << "YES";
-        return;
-      }
-    }
-    cout << "NO";
   }
+  cout << "NO";
+}
 
-  int main()
+int main()
+{
+#ifndef ONLINE_JUDGE
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
+
+#endif
+  ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+
+  int T = 1;
+  // cin >> T;
+
+  while (T--)
   {
-  #ifndef ONLINE_JUDGE
-    freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
-
-  #endif
-    ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
-
-    int T = 1;
-    // cin >> T;
-
-    while (T--)
-    {
-      solve();
-    }
+    solve();
   }
+}

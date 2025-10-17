@@ -7,7 +7,7 @@ using namespace std;
 
 double distance(double x1, double y1, double x2, double y2)
 {
-  return sqrt( pow(x1 - x2, 2) + pow(y2 - y1, 2));
+  return sqrt(pow(x1 - x2, 2) + pow(y2 - y1, 2));
 }
 
 void solve()
@@ -31,7 +31,7 @@ void solve()
 
   double line = distance(center1X, center1Y, center2X, center2Y);
 
-  if (line > r1+r2 )
+  if (line > r1 + r2)
   {
     cout << "NO";
   }
@@ -44,7 +44,7 @@ void solve()
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);

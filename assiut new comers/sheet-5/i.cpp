@@ -3,7 +3,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 void solve()
 {
   int n, x, y;
@@ -11,10 +10,9 @@ void solve()
   x--;
   y--;
 
-  
   int mn = min({x, y}); // 1
   int mx = max({x, y}); // 2
-  
+
   int diff = mx - mn;
 
   int arr[n][n];
@@ -28,26 +26,26 @@ void solve()
       cin >> k;
 
       i = r;
-      j = c; 
+      j = c;
 
       if (r == mn)
       {
-        i+=diff;
+        i += diff;
       }
 
       if (r == mx)
       {
-        i-=diff;
+        i -= diff;
       }
 
       if (c == mn)
       {
-        j+=diff;
+        j += diff;
       }
 
       if (c == mx)
       {
-        j-=diff;
+        j -= diff;
       }
 
       arr[i][j] = k;
@@ -69,7 +67,7 @@ void solve()
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);

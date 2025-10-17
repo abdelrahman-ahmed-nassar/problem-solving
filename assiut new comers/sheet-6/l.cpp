@@ -32,7 +32,7 @@ void solve()
     for (int j = 0; j <= i; j++)
     {
       cout << arr[i][j];
-      if (j < i )
+      if (j < i)
       {
         cout << " ";
       }
@@ -47,7 +47,7 @@ void solve()
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("ou2-out.txt "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
@@ -82,16 +82,16 @@ Examples
 InputCopy
 3
 OutputCopy
-1 
-1 1 
-1 2 1 
+1
+1 1
+1 2 1
 InputCopy
 4
 OutputCopy
-1 
-1 1 
-1 2 1 
-1 3 3 1 
+1
+1 1
+1 2 1
+1 3 3 1
 Note
 For more information visit pascal triangle:
 

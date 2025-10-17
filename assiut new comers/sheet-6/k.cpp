@@ -8,7 +8,8 @@ using namespace std;
 
 ll factorial(int n)
 {
-  if (n == 0 || n == 1) {
+  if (n == 0 || n == 1)
+  {
     return 1;
   }
   ll sum = 1;
@@ -30,8 +31,8 @@ void solve()
 
 int main()
 {
-#ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+#ifndef ONLINE_JUDGE2 - out.txt
+  freopen("1-in.txt", "r", stdin), freopen("out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);

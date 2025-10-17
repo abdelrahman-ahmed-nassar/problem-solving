@@ -15,17 +15,17 @@ void pyramids(int n, int c)
 
   for (int i = 1; i <= k; i++)
   {
-      if (i <= ceil(k / 2) + c && i >= ceil(k / 2) - c)
+    if (i <= ceil(k / 2) + c && i >= ceil(k / 2) - c)
+    {
+      cout << "*";
+    }
+    else
+    {
+      if (i < ceil(k / 2))
       {
-        cout << "*";
+        cout << " ";
       }
-      else
-      {
-        if (i < ceil(k / 2))
-        {
-          cout << " ";
-        }
-      }
+    }
   }
   cout << endl;
 
@@ -43,7 +43,7 @@ void solve()
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);

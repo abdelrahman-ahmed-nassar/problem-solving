@@ -4,17 +4,67 @@ using namespace std;
 
 #define ll long long
 
+long long CalcMaxValueSum(int arr[][2], int n, int w, int c, long long currentSum, long long currentWeight)
+{
+  if (c >= n)
+  {
+    return currentSum;
+  }
+
+  if (currentWeight + arr[c][0] <= w)
+  {
+    currentWeight += arr[c][0];
+    currentSum += arr[c][1];
+  }
+  if (currentWeight > w)
+  {
+    return currentSum;
+  }
+
+  return CalcMaxValueSum(arr, n, w, c + 1, currentSum, currentWeight);
+}
 
 void solve()
 {
-  
-}
+  int n, w;
+  cin >> n >> w;
 
+  int arr[n][2];
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < 2; j++)
+    {
+      cin >> arr[i][j];
+    }
+  }
+
+  // sort by weight [weight, value] (bubble) (large -> small)
+
+  for (int i = 0; i < n - 1; i++)
+  {
+    for (int j = 0; j < n - i - 1; j++)
+    {
+      if (arr[j][1] < arr[j + 1][1])
+      {
+        int tempW = arr[j][0];
+        int tempV = arr[j][1];
+
+        arr[j][0] = arr[j + 1][0];
+        arr[j][1] = arr[j + 1][1];
+
+        arr[j + 1][0] = tempW;
+        arr[j + 1][1] = tempV;
+      }
+    }
+  }
+
+  cout << CalcMaxValueSum(arr, n, w, 0, 0, 0);
+}
 
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
@@ -27,9 +77,6 @@ int main()
     solve();
   }
 }
-
-
-
 
 /*U. Knapsack
 time limit per test2 seconds

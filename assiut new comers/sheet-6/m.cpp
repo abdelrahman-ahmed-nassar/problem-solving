@@ -4,20 +4,18 @@ using namespace std;
 
 #define ll long long
 
-
 void solve()
 {
-  string a,b;
-  cin>>a>>b;
+  string a, b;
+  cin >> a >> b;
 
-  cout<<(a%b==0 ? "YES" : "NO");
+  cout << (a % b == 0 ? "YES" : "NO");
 }
-
 
 int main()
 {
 #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
+  freopen("1-in.txt", "r", stdin), freopen("2-out.txt", "w", stdout);
 
 #endif
   ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
@@ -30,9 +28,6 @@ int main()
     solve();
   }
 }
-
-
-
 
 /*M. Divisible
 time limit per test1 second
