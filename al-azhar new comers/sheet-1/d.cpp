@@ -26,6 +26,9 @@ vector<string> RET = {"NO", "YES"};
 
 void solve()
 {
+  ll a, b, c, d;
+  cin >> a >> b >> c >> d;
+  cout << "Difference = "<< (a * b) - (c * d);
 }
 
 int main()
